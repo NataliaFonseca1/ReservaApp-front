@@ -1,9 +1,9 @@
-const base = 'http://localhost:8080'
+const base = 'https://reservaapp-zb6y.onrender.com';
 
 export async function get(url) {
-  const res = await fetch(base + url)
-  if (!res.ok) throw new Error(res.statusText)
-  return res.json()
+  const res = await fetch(base + url);
+  if (!res.ok) throw new Error(res.statusText);
+  return res.json();
 }
 
 export async function post(url, body) {
@@ -11,9 +11,9 @@ export async function post(url, body) {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(body)
-  })
-  if (!res.ok) throw new Error(res.statusText)
-  return res.json()
+  });
+  if (!res.ok) throw new Error(res.statusText);
+  return res.json();
 }
 
 export async function put(url, body) {
@@ -21,7 +21,7 @@ export async function put(url, body) {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(body)
-  })
-  if (!res.ok) throw new Error(res.statusText)
-  return res.json()
+  });
+  if (!res.ok) throw new Error(res.statusText);
+  return res.json();
 }
