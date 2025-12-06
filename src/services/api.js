@@ -25,3 +25,8 @@ export async function put(url, body) {
   if (!res.ok) throw new Error(res.statusText);
   return res.json();
 }
+export async function del(url) {
+  const res = await fetch(base + url, { method: 'DELETE' })
+  if (!res.ok) throw new Error(res.statusText)
+  return true
+}
